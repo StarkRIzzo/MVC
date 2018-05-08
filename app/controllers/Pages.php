@@ -5,15 +5,18 @@
         }
         
         public function index() {
-            $this->view("pages/init");
+            $dates = [
+                'title' => 'Welcome to StarkProyect'
+            ];
+            $this->view("pages/init", $dates);
         }
         
-        public function article($id) {
-            print_r ($id);
+        public function article() {
+            //$this->view("pages/article");
         }
         
         public function refresh() {
-            echo "Refresh";
+            
         }
     }
 ?>
