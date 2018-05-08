@@ -12,6 +12,15 @@
            }
            require_once "../app/controllers/". $this->controller . ".php";
            $this->controller = new $this->controller;
+           
+           if(isset($url[1])) {
+            if(method_exists($this->controller, $url[1])) {
+                $this->method = $url[1];
+                unset($url[1]);
+            }
+           }
+           $this->parameters = $url ? array_values($url) : [];
+           call_user_func_array([$this->controller, $this->method], $this->parameters);
         }
         
         public function getUrl() {
