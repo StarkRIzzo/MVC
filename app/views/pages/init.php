@@ -1,3 +1,4 @@
 <?php require PATH_APP . '/views/inc/header.php' ?>
-<h1><?php echo $dates["title"] ?></h1>
+<h3><?php echo $dates["title"] ?></h3>
+<p>Framework PHP MVC</p>
 <?php require PATH_APP . '/views/inc/footer.php' ?>
